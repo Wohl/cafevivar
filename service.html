@@ -24,31 +24,75 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.min.css" rel="stylesheet">
+
+    <style>
+    body {
+      background: #fcf8f1;
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    /* Posición fija para los botones */
+    .fixed-btn {
+      position: fixed;
+      right: 24px;
+      z-index: 1050;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: bounce 2s infinite;
+    }
+
+    /* Botón WhatsApp circular verde */
+    .whatsapp-btn {
+      bottom: 30px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 3.5px solid #25d366;
+      background: transparent;
+      color: #25d366;
+      font-size: 1.8rem;
+      text-decoration: none;
+      transition: box-shadow 0.2s;
+    }
+    .whatsapp-btn:hover {
+      box-shadow: 0 0 8px #25d366;
+    }
+
+
+    /* Animación de rebote */
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0);}
+      50% { transform: translateY(-10px);}
+    }
+  </style>
 </head>
 
 <body>
     <!-- Navbar Start -->
-    <div class="container-fluid p-0 nav-bar">
+    <div class="container-fluid p-4 nav-bar">
         <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
-            <a href="index.html" class="navbar-brand px-lg-4 m-0">
-                <div style="background: white; padding: 10px; border-radius: 8px; max-width: 48%; box-sizing: border-box;">
-                <img src="img/Vivar Coffee Company.png" alt="Vivar Coffee Company" class="img-fluid rounded" style="display: block; width: 100%; height: auto;">
-                </div>
-            </a>
+            <a href="index.html" class="navbar-brand px-lg-6 m-0">
+                <div style="background: white; padding: 10px; border-radius: 8px; max-width: 50%; box-sizing: border-box;">
+                <img src="img/logo lustrador company.png" alt="Vivar Coffee Company" class="img-fluid rounded" style="display: block; width: 100%; height: auto;">
+                </div>            </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                <div class="navbar-nav ml-auto p-4">
-                    <a href="index.html" class="nav-item nav-link">Inicio</a>
-                    <a href="about.html" class="nav-item nav-link">Nosotros</a>
-                    <a href="service.html" class="nav-item nav-link active">Servicios</a>
-                    <a href="contact.html" class="nav-item nav-link">Contacto</a>
+                <div class="navbar-nav ml-auto p-6">
+                    <h3><a href="index.html" class="nav-item nav-link ">Inicio</a></h3>
+                    <h3><a href="about.html" class="nav-item nav-link">Nosotros</a></h3>
+                    <h3><a href="service.html" class="nav-item nav-link active">Servicios</a></h3>
+                    <h3><a href="contact.html" class="nav-item nav-link">Contacto</a></h3>
                 </div>
             </div>
         </nav>
     </div>
     <!-- Navbar End -->
+
 
 
     <!-- Page Header Start -->
@@ -69,8 +113,8 @@
     <div class="container-fluid pt-5">
         <div class="container">
             <div class="section-title">
-                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Our Services</h4>
-                <h1 class="display-4">Fresh & Organic Beans</h1>
+                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Nuestros Servicios</h4>
+                <h1 class="display-4">Conectamos soluciones, impulsamos tu éxito.</h1>
             </div>
             <div class="row">
                 <div class="col-lg-6 mb-5">
@@ -163,10 +207,10 @@
                 <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Nuestras Marcas</h4>
                 <div class="d-flex justify-content-between align-items-center" style="gap: 15px;">
                 <div style="background: white; padding: 10px; border-radius: 8px; max-width: 48%; box-sizing: border-box;">
-                <img src="img/Vivar Coffee Company.png" alt="Vivar Coffee Company" class="img-fluid rounded" style="display: block; width: 100%; height: auto;">
+                <img src="img/logo lustrador company 2.png" alt="Vivar Coffee Company" class="img-fluid rounded" style="display: block; width: 100%; height: auto;">
                 </div>
              <div style="background: white; padding: 10px; border-radius: 8px; max-width: 48%; box-sizing: border-box;">
-                <img src="img/Tecno Cage.png" alt="Tecno Cage" class="img-fluid rounded" style="display: block; width: 100%; height: auto;">
+                <img src="img/LOGO CAFE VIVA.jpg" alt="Tecno Cage" class="img-fluid rounded" style="display: block; width: 100%; height: auto;">
              </div>
              </div>
             </div>
@@ -179,8 +223,16 @@
     <!-- Footer End -->
 
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+  <a href="https://wa.me/50664650000?text=Hola%20quiero%20información" target="_blank" aria-label="WhatsApp" class="fixed-btn whatsapp-btn">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Botón Back to Top -->
+  <button aria-label="Volver arriba" class="fixed-btn back-to-top-btn">
+    <i class="fa fa-angle-double-up"></i>
+  </button>
+
+
 
 
     <!-- JavaScript Libraries -->
